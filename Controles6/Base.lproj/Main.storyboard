@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Controles6" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SYF-T0-hmg">
+                                <rect key="frame" x="20" y="84" width="374" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="botonClick:" destination="BYZ-38-t0r" eventType="touchUpInside" id="uPF-hZ-lzk"/>
+                                </connections>
+                            </button>
+                            <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Xb6-3w-trj">
+                                <rect key="frame" x="5" y="135" width="414" height="216"/>
+                            </pickerView>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="jiL-V5-Jj6">
+                                <rect key="frame" x="20" y="371" width="374" height="26"/>
+                                <connections>
+                                    <action selector="pagecontrolClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="rsD-rw-tXp"/>
+                                </connections>
+                            </pageControl>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="XBm-Xy-OT1">
+                                <rect key="frame" x="5" y="417" width="404" height="32"/>
+                                <segments>
+                                    <segment title="First"/>
+                                    <segment title="Second"/>
+                                </segments>
+                                <connections>
+                                    <action selector="segmentoClick:" destination="BYZ-38-t0r" eventType="valueChanged" id="E5t-jz-2q9"/>
+                                </connections>
+                            </segmentedControl>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="Cru-a6-ehp">
+                                <rect key="frame" x="3" y="468" width="408" height="31"/>
+                                <connections>
+                                    <action selector="sliderclick:" destination="BYZ-38-t0r" eventType="valueChanged" id="1aS-d3-u2a"/>
+                                </connections>
+                            </slider>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="SYF-T0-hmg" secondAttribute="trailing" constant="20" id="0qY-AK-KpK"/>
+                            <constraint firstItem="XBm-Xy-OT1" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="6cf-E7-rNa"/>
+                            <constraint firstItem="XBm-Xy-OT1" firstAttribute="top" secondItem="jiL-V5-Jj6" secondAttribute="bottom" constant="20" id="DU5-6N-QDo"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="XBm-Xy-OT1" secondAttribute="trailing" constant="5" id="Ido-46-Bns"/>
+                            <constraint firstItem="jiL-V5-Jj6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="OwB-BX-ibR"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Cru-a6-ehp" secondAttribute="trailing" constant="5" id="QQN-28-Fy7"/>
+                            <constraint firstItem="Cru-a6-ehp" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="YCl-mR-k6T"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="jiL-V5-Jj6" secondAttribute="trailing" constant="20" id="Yhj-8I-2IO"/>
+                            <constraint firstItem="Cru-a6-ehp" firstAttribute="top" secondItem="XBm-Xy-OT1" secondAttribute="bottom" constant="20" id="ZAr-oQ-frL"/>
+                            <constraint firstItem="Xb6-3w-trj" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="5" id="dlb-fh-sea"/>
+                            <constraint firstItem="Xb6-3w-trj" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="5" id="egr-7L-ZMx"/>
+                            <constraint firstItem="Xb6-3w-trj" firstAttribute="top" secondItem="SYF-T0-hmg" secondAttribute="bottom" constant="20" id="h6S-di-2Vq"/>
+                            <constraint firstItem="jiL-V5-Jj6" firstAttribute="top" secondItem="Xb6-3w-trj" secondAttribute="bottom" constant="20" id="oh5-wf-JhT"/>
+                            <constraint firstItem="SYF-T0-hmg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="pgH-bm-MiF"/>
+                            <constraint firstItem="SYF-T0-hmg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="wV9-dU-ePi"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="boton" destination="SYF-T0-hmg" id="bfW-sh-kPw"/>
+                        <outlet property="pagecontrol" destination="jiL-V5-Jj6" id="mAA-J1-MnK"/>
+                        <outlet property="picker" destination="Xb6-3w-trj" id="YCh-pr-N55"/>
+                        <outlet property="segmento" destination="XBm-Xy-OT1" id="qWn-rF-Od0"/>
+                        <outlet property="slider" destination="Cru-a6-ehp" id="PYt-JE-Jq6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3" y="36"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
